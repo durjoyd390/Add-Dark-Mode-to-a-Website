@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dark/Light Mode</title>
+	<style type="text/css">
+		body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+	</style>
+</head>
+<body>
+<h2>Dark/Light Mode</h2>
+<p>Click the Moon/Sun Icon button to toggle between dark and light mode for this page.</p>
+<img src="img/moon-line.png" id="icon" onclick="myFunction()">
+
+<script type="text/javascript">
+	function myFunction() {
+  var element = document.body;
+   var icon = document.getElementById("icon").getAttribute('src');;
+   if (icon=='img/moon-line.png') {
+   	document.getElementById("icon").src = "img/sun-line.png";
+   }else{
+   	document.getElementById("icon").src = "img/moon-line.png";
+   }
+   element.classList.toggle("dark-mode");
+	}
+
+</script>
+
+</body>
+</html>
